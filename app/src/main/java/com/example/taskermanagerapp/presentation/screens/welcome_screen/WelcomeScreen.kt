@@ -78,7 +78,7 @@ fun WelcomeScreen(
                         textAlign = TextAlign.Center,
                         modifier = modifier.padding(top = 10.dp),
                         fontSize = 37.sp,
-                        color = Color.Black,
+                        color = MaterialTheme.colorScheme.onBackground,
                         fontWeight = FontWeight.Bold,
                         style = TextStyle(letterSpacing = 2.sp)
                     )
@@ -97,7 +97,7 @@ fun WelcomeScreen(
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         modifier = modifier
                             .fillMaxWidth(0.8f)
-                            .height(40.dp)
+                            .height(50.dp)
                             .background(
                                 brush = Brush.linearGradient(
                                     colors = listOf(

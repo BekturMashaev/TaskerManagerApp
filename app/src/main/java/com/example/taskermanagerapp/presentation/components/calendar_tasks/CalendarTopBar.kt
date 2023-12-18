@@ -17,17 +17,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.taskermanagerapp.R
+import com.example.taskermanagerapp.presentation.navigation.Screens
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TasksScreenTopBar(
+    navController: NavController,
     modifier: Modifier = Modifier,
 ) {
     CenterAlignedTopAppBar(
         navigationIcon = {
             OutlinedIconButton(
-                onClick = { /*TODO*/ }) {
+                onClick = {
+                    navController.navigate(
+                        Screens.MainScreen.route.toString()
+                    )
+                }) {
                 Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = null)
             }
         },

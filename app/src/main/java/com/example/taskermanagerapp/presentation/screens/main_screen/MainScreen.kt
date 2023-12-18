@@ -31,11 +31,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.taskermanagerapp.R
 import com.example.taskermanagerapp.data.fake_data.TaskerFakeData
 import com.example.taskermanagerapp.presentation.components.BottomAppBar
 import com.example.taskermanagerapp.presentation.components.main_screen.MainScreenTopBar
 import com.example.taskermanagerapp.presentation.components.main_screen.TaskerItem
+import com.example.taskermanagerapp.presentation.navigation.Screens
 import com.example.taskermanagerapp.presentation.theme.ButtonGradientBlue
 import com.example.taskermanagerapp.presentation.theme.ButtonGradientPurple
 
@@ -43,7 +46,7 @@ import com.example.taskermanagerapp.presentation.theme.ButtonGradientPurple
 @Composable
 fun MainScreenPreview() {
     MaterialTheme {
-        MainScreen()
+        MainScreen(navController = rememberNavController())
     }
 }
 
@@ -51,6 +54,7 @@ fun MainScreenPreview() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
+    navController: NavController,
     modifier: Modifier = Modifier,
 ) {
     Scaffold(
@@ -76,10 +80,14 @@ fun MainScreen(
                     color= Color.Gray
                 )
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {
+                        navController.navigate(
+                            Screens.TasksScreen.route.toString()
+                        )
+                    },
                     modifier = modifier
                         .fillMaxWidth()
-                        .height(93.dp)
+                        .height(110.dp)
                         .padding(top = 25.dp)
                         .background(
                             brush = Brush.linearGradient(
