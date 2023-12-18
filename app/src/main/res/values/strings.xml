@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TaskerManagerApp</string>
+    <string name="main_screen_route">MainScreen</string>
+    <string name="welcome_screen_route">WelcomeScreen</string>
+    <string name="tasks_screen_route">TasksScreen</string>
+    <string name="welcome_screen_title">"Building Better \n Workplaces "</string>
+    <string name="button_welcome_screen_title">Get Started</string>
+    <string name="day_of_week_txt">Monday</string>
+    <string name="day_of_year_txt">25 October</string>
+    <string name="hi_avatar_txt">Hi Surf.</string>
+    <string name="tasks_availbale">5 Tasks are preening</string>
+    <string name="information_architecture">Information Architecture</string>
+    <string name="saber_oro"><![CDATA[Saber & Oro]]></string>
+    <string name="monthly_preview">Monthly Preview</string>
+</resources>
