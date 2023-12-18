@@ -13,12 +13,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.taskermanagerapp.R
+import com.example.taskermanagerapp.presentation.navigation.Screens
 import com.example.taskermanagerapp.presentation.theme.LightBlueIcon
 import com.example.taskermanagerapp.presentation.theme.TaskerBlue
 
 @Composable
 fun BottomAppBar(
+    navController: NavController,
     isMainScreen: Boolean
 ) {
     BottomAppBar(
@@ -29,7 +32,11 @@ fun BottomAppBar(
                     .clip(RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp))
             ) {
                 Spacer(modifier = Modifier.weight(1f))
-                IconButton(onClick = { /*TODO*/ }) {
+                IconButton(onClick = {
+                    navController.navigate(
+                        Screens.MainScreen.route.toString()
+                    )
+                }) {
                     Icon(
                         painter = painterResource(
                             id = R.drawable.home
@@ -38,7 +45,11 @@ fun BottomAppBar(
                     )
                 }
                 Spacer(modifier = Modifier.weight(1f))
-                IconButton(onClick = { }) {
+                IconButton(onClick = {
+                    navController.navigate(
+                        Screens.TasksScreen.route.toString()
+                    )
+                }) {
                     Icon(
                         painter = painterResource(
                             id = R.drawable.calendar

@@ -27,7 +27,7 @@ fun TasksScreen(
             }
         },
         bottomBar = {
-            BottomAppBar(isMainScreen = false)
+            BottomAppBar(navController=navController,isMainScreen = false)
         }
     )
 }

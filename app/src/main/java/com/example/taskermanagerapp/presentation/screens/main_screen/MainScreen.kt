@@ -72,7 +72,7 @@ fun MainScreen(
                     text = stringResource(R.string.hi_avatar_txt),
                     fontSize = 28.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black
+                    color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
                     text = stringResource(R.string.tasks_availbale),
@@ -136,7 +136,7 @@ fun MainScreen(
                         .padding(top = 25.dp),
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
-                    color= Color.Black
+                    color = MaterialTheme.colorScheme.onBackground
                 )
                 LazyVerticalStaggeredGrid(
                     modifier= Modifier
@@ -150,7 +150,7 @@ fun MainScreen(
             }
         },
         bottomBar = {
-            BottomAppBar(true)
+            BottomAppBar(navController=navController,true)
         }
     )
 }
