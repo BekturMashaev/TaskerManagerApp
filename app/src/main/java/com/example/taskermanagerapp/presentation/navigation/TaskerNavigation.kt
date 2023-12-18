@@ -19,13 +19,13 @@ fun TaskerNavigation() {
         startDestination = welcomeScreenRoute,
     ) {
         composable(mainScreenRoute) {
-            MainScreen()
+            MainScreen(navController=navController)
         }
         composable(welcomeScreenRoute) {
             WelcomeScreen(navController=navController)
         }
         composable(tasksScreenRoute) {
-            TasksScreen()
+            TasksScreen(navController=navController)
         }
     }
 }
